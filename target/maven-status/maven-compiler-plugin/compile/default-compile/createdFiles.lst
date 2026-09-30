@@ -1,0 +1,8 @@
+Backend\TransactionDAO.class
+Backend\AddTransactionServlet.class
+Backend\User.class
+Backend\Main.class
+Backend\Transaction.class
+Backend\UserDAO.class
+Backend\DBConnection.class
+Backend\RegisterServlet.class

@@ -1,0 +1,321 @@
+/* ------------------------------
+       General
+    --------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #222;
+}
+
+
+/* ------------------------------
+   Header
+--------------------------------*/
+
+header {
+    background-color: #1f2937;
+    color: white;
+
+    padding: 18px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ------------------------------
+   Main
+--------------------------------*/
+
+main {
+    width: 85%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+
+/* ------------------------------
+   Summary Cards
+--------------------------------*/
+
+.summary-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.summary-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+            0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card h3 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.summary-card p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.income p {
+    color: #16a34a;
+}
+
+.expense p {
+    color: #dc2626;
+}
+
+.balance p {
+    color: #2563eb;
+}
+
+
+/* ------------------------------
+   Form
+--------------------------------*/
+
+#add-expense {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+            0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+#expense-form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+
+/* ------------------------------
+   Button
+--------------------------------*/
+
+button {
+    background-color: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 20px;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    grid-column: span 2;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* ------------------------------
+   Transaction Table
+--------------------------------*/
+
+.table-container {
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    overflow-x: auto;
+
+    box-shadow:
+            0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f3f4f6;
+}
+
+.income-text {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.expense-text {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.delete-btn {
+    background-color: #dc2626;
+
+    padding: 7px 12px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+
+/* ------------------------------
+   Footer
+--------------------------------*/
+
+footer {
+    background-color: #1f2937;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 50px;
+}
+
+
+/* ------------------------------
+   Responsive Design
+--------------------------------*/
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .summary-container {
+        grid-template-columns: 1fr;
+    }
+
+    #expense-form {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        grid-column: span 1;
+    }
+}

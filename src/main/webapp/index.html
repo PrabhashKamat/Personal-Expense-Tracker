@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">
+        💰 Expense Tracker
+    </div>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#transactions">Transactions</a>
+        <a href="#add-expense">Add Expense</a>
+    </nav>
+</header>
+
+
+<!-- Main Container -->
+<main>
+
+    <!-- Dashboard -->
+    <section id="dashboard">
+
+        <h1>Dashboard</h1>
+        <p class="subtitle">Track and manage your personal expenses</p>
+
+        <!-- Summary Cards -->
+        <div class="summary-container">
+
+            <div class="summary-card income">
+                <h3>Total Income</h3>
+                <p id="total-income">₹0</p>
+            </div>
+
+            <div class="summary-card expense">
+                <h3>Total Expense</h3>
+                <p id="total-expense">₹0</p>
+            </div>
+
+            <div class="summary-card balance">
+                <h3>Balance</h3>
+                <p id="balance">₹0</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Add Expense -->
+    <section id="add-expense">
+
+        <h2>Add Transaction</h2>
+
+        <form id="expense-form">
+
+            <div class="form-group">
+                <label for="type">Transaction Type</label>
+
+                <select id="type" required>
+                    <option value="">Select Type</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="category">Category</label>
+
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Food">Food</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Education">Education</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="amount">Amount</label>
+
+                <input
+                        type="number"
+                        id="amount"
+                        placeholder="Enter amount"
+                        min="1"
+                        required
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="description">Description</label>
+
+                <input
+                        type="text"
+                        id="description"
+                        placeholder="Example: Lunch at college"
+                        required
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="date">Date</label>
+
+                <input
+                        type="date"
+                        id="date"
+                        required
+                >
+            </div>
+
+
+            <button type="submit">
+                Add Transaction
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Transactions -->
+    <section id="transactions">
+
+        <h2>Recent Transactions</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+
+                <tbody id="transaction-list">
+                <!-- JavaScript will add transactions here -->
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Personal Expense Tracker</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
